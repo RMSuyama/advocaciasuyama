@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="app bg-dark h-[100dvh] overflow-y-auto snap-y snap-proximity text-white font-inter selection:bg-primary selection:text-navy">
+    <div className="app bg-dark h-[100dvh] overflow-y-auto snap-y snap-mandatory text-white font-inter selection:bg-primary selection:text-navy">
       <Header />
       <main>
         <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><Hero /></div>
