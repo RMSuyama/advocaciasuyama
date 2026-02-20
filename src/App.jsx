@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import Checkout from './components/Checkout';
+import TrustOffer from './components/TrustOffer';
 import './index.css';
 
 const Home = () => (
@@ -14,6 +15,7 @@ const Home = () => (
     <ProductHero />
     <Features />
     <Reviews />
+    <TrustOffer />
   </>
 );
 

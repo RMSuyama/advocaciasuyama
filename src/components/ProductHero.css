@@ -1,109 +1,168 @@
 .product-hero {
-    padding: 60px 0;
-    background-color: var(--bg-dark);
+    padding: 140px 0 80px;
+    background: radial-gradient(circle at top, #111, #050505);
 }
 
-.product-info {
-    max-width: 800px;
+.hero-content-wrapper {
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
 
-.hero-image-container {
-    margin-bottom: 60px;
+.pre-headline {
+    display: block;
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
 }
 
-.ruptura-img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-}
-
-.identificacao {
-    margin: 80px 0;
-    text-align: left;
-    background: var(--bg-card);
-    padding: 50px;
-    border-radius: 24px;
-}
-
-.identificacao h3 {
-    font-size: 2rem;
+.main-headline {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
     margin-bottom: 30px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(to bottom, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.cansado-de {
-    list-style: none;
-    margin-bottom: 40px;
-}
-
-.cansado-de li {
-    font-size: 1.2rem;
+.sub-headline {
+    font-size: 1.4rem;
     color: var(--text-muted);
-    margin-bottom: 15px;
-    display: flex;
-    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.5;
 }
 
-.cansado-de span {
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.esgotamento-msg {
-    border-top: 1px solid #333;
-    padding-top: 30px;
-    font-size: 1.2rem;
-}
-
-.esgotamento-msg .highlight {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-main);
-    margin-top: 10px;
-}
-
-.quebra-crenca {
-    margin: 80px 0;
-    font-size: 1.8rem;
-    line-height: 1.4;
-}
-
-.quebra-crenca .sub-text {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-top: 20px;
-}
-
-.buy-button {
+.cta-button {
     display: inline-block;
-    background-color: var(--primary);
-    color: white;
     padding: 25px 60px;
     border-radius: 100px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 900;
     text-decoration: none;
     transition: var(--transition);
 }
 
-.buy-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+.primary-cta {
+    background: var(--text-main);
+    color: var(--bg-dark);
+}
+
+.primary-cta:hover {
+    background: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dor-espelhamento {
+    text-align: left;
+    background: #0a0a0a;
+    padding: 80px;
+    border-radius: 40px;
+    border: 1px solid #1a1a1a;
+    margin-top: 100px;
+}
+
+.dor-espelhamento h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.dor-list {
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.dor-list li {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+    display: flex;
+    gap: 20px;
+}
+
+.dor-list span {
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.consciencia-block {
+    border-top: 1px solid #222;
+    padding-top: 40px;
+}
+
+.consciencia-text {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.consciencia-punchline {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.consciencia-punchline strong {
+    color: #fff;
+    border-bottom: 4px solid var(--primary);
+}
+
+.quebra-crenca-premium {
+    padding: 120px 0;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.crenca-msg {
+    color: var(--accent);
+}
+
+.crenca-msg strong {
+    color: #fff;
+    font-weight: 900;
+}
+
+.crenca-sub {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 768px) {
-    .product-title {
-        font-size: 3rem;
+    .main-headline {
+        font-size: 2.5rem;
     }
 
-    .identificacao {
-        padding: 30px;
+    .dor-espelhamento {
+        padding: 40px 20px;
     }
 
-    .quebra-crenca {
-        font-size: 1.4rem;
+    .dor-espelhamento h3 {
+        font-size: 1.5rem;
+    }
+
+    .dor-list li {
+        font-size: 1.1rem;
+    }
+
+    .quebra-crenca-premium {
+        font-size: 1.6rem;
+    }
+
+    .primary-cta {
+        padding: 20px 40px;
+        font-size: 1.2rem;
     }
 }

@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
-
 :root {
   --primary: #e63946;
-  /* Impactful Red for Urgency/Action */
-  --bg-dark: #0a0a0a;
-  --bg-card: #161616;
+  /* Keeping red for urgency, but using it subtly */
+  --bg-dark: #050505;
+  --bg-card: #0a0a0a;
   --text-main: #ffffff;
   --text-muted: #888888;
-  --accent: #f1faee;
-  --font-heading: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --transition: all 0.3s ease;
+  --accent: #d4af37;
+  /* A subtle gold/warm accent for 'rebirth/clarity' */
+  --font-main: 'Inter', sans-serif;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -20,69 +18,55 @@
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-main);
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  font-family: inherit;
-}
-
-input {
-  outline: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 900px;
+  width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-/* Animations */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
   }
 
-  50% {
+  70% {
     transform: scale(1.02);
+    box-shadow: 0 0 0 20px rgba(230, 57, 70, 0);
   }
 
   100% {
     transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
   }
 }
 
-.animate-pulse {
-  animation: pulse 2s infinite ease-in-out;
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }

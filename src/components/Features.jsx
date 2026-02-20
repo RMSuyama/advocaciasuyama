@@ -21,23 +21,24 @@ const Features = () => {
     return (
         <section className="features">
             <div className="container">
-                <div className="retorno-explanation">
+                <div className="retorno-solucao section-margin">
                     <h2 className="section-title">O que é o RETORNO?</h2>
                     <p className="retorno-desc">Um processo breve, direto e profundo, focado em:</p>
-                    <div className="points-grid">
-                        <div className="point">✓ organizar pensamentos</div>
-                        <div className="point">✓ reduzir ansiedade</div>
-                        <div className="point">✓ aliviar o peso emocional</div>
-                        <div className="point">✓ retomar controle</div>
-                        <div className="point">✓ clarear decisões</div>
+                    <div className="transformations-grid">
+                        <div className="transform-point"><span>✓</span> organizar pensamentos</div>
+                        <div className="transform-point"><span>✓</span> reduzir ansiedade</div>
+                        <div className="transform-point"><span>✓</span> aliviar o peso emocional</div>
+                        <div className="transform-point"><span>✓</span> retomar controle</div>
+                        <div className="transform-point"><span>✓</span> clarear decisões</div>
                     </div>
                 </div>
 
-                <div className="how-it-works">
+                <div className="how-it-works section-margin">
                     <h2 className="section-title">Como funciona</h2>
-                    <div className="steps-grid">
+                    <div className="steps-container">
                         {steps.map((s, i) => (
-                            <div key={i} className="step-card">
+                            <div key={i} className="step-card-modern">
+                                <div className="step-num">{i + 1}</div>
                                 <h3>{s.title}</h3>
                                 <p>{s.desc}</p>
                             </div>
@@ -45,15 +46,18 @@ const Features = () => {
                     </div>
                 </div>
 
-                <div className="for-who">
-                    <h2>Para quem é</h2>
-                    <div className="who-list">
-                        <p>✔ Pessoas esgotadas</p>
-                        <p>✔ Pessoas confusas</p>
-                        <p>✔ Pessoas que sentem que estão se abandonando</p>
-                        <p>✔ Pessoas que querem voltar a viver com sentido</p>
+                <div className="target-audience section-margin">
+                    <h2 className="section-title">Para quem é</h2>
+                    <div className="audience-list">
+                        <p><span>✔</span> Pessoas esgotadas que não sabem por onde começar</p>
+                        <p><span>✔</span> Pessoas confusas que sentem que a mente está um caos</p>
+                        <p><span>✔</span> Pessoas que sentem que estão se abandonando aos poucos</p>
+                        <p><span>✔</span> Pessoas que querem voltar a viver com sentido e presença</p>
                     </div>
-                    <p className="not-for">Não é para quem quer frases bonitas. <b>É para quem quer mudança real.</b></p>
+                    <div className="not-for-box">
+                        <p><strong>Não é para quem quer frases bonitas.</strong></p>
+                        <p>É para quem quer mudança real.</p>
+                    </div>
                 </div>
             </div>
         </section>

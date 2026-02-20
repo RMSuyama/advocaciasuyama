@@ -7,39 +7,43 @@ const ProductHero = () => {
     return (
         <section className="product-hero">
             <div className="container">
-                <div className="product-info">
+                <div className="hero-content-wrapper">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="hero-image-container"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="impact-header"
                     >
-                        {/* The image provided by the user */}
-                        <img src="/src/assets/ruptura.png" alt="O Ponto de Ruptura" className="ruptura-img" />
+                        <span className="pre-headline">Pare por 3 minutos. Leia isso.</span>
+                        <h1 className="main-headline">Pare de se abandonar e recupere sua dignidade emocional</h1>
+                        <p className="sub-headline">Se você sente que está se perdendo de si mesmo, este site não vende um ebook. Ele oferece uma saída.</p>
+
+                        <Link to="/checkout" className="cta-button primary-cta animate-pulse">
+                            QUERO VOLTAR PRA MIM
+                        </Link>
                     </motion.div>
 
-                    <div className="identificacao section-margin">
+                    <div className="dor-espelhamento section-margin">
                         <h3>Você sente que:</h3>
-                        <ul className="cansado-de">
-                            <li><span>→</span> vive no automático?</li>
-                            <li><span>→</span> está sempre cansado?</li>
-                            <li><span>→</span> se cobra demais?</li>
-                            <li><span>→</span> perdeu o prazer pelas coisas simples?</li>
-                            <li><span>→</span> sente que está se deixando pra depois?</li>
+                        <ul className="dor-list">
+                            <li><span>→</span> vive no automático, como se estivesse apenas assistindo sua vida?</li>
+                            <li><span>→</span> está sempre cansado, mesmo após uma noite inteira de sono?</li>
+                            <li><span>→</span> se cobra demais por coisas que não consegue controlar?</li>
+                            <li><span>→</span> perdeu o prazer pelas coisas simples que antes amava?</li>
+                            <li><span>→</span> está sempre se deixando para depois para agradar aos outros?</li>
                         </ul>
-                        <div className="esgotamento-msg">
-                            <p>Isso não é preguiça. Não é drama. Não é fraqueza.</p>
-                            <p className="highlight">É esgotamento emocional silencioso.</p>
+
+                        <div className="consciencia-block">
+                            <p className="consciencia-text">Isso não é preguiça. Não é drama. Não é fraqueza.</p>
+                            <p className="consciencia-punchline">É <strong>esgotamento emocional silencioso</strong> por autoabandono.</p>
                         </div>
                     </div>
 
-                    <div className="quebra-crenca">
-                        <p>Você não precisa de mais força. Você precisa de <strong>clareza, espaço mental e reorganização interna.</strong></p>
-                        <p className="sub-text">A maioria das pessoas não está doente. Está sobrecarregada, confusa e sozinha nos próprios pensamentos.</p>
+                    <div className="quebra-crenca-premium">
+                        <p>Você não precisa de "mais força de vontade".</p>
+                        <p className="crenca-msg">Você precisa de <strong>clareza, espaço mental e uma nova reorganização interna.</strong></p>
+                        <p className="crenca-sub">A maioria das pessoas não está doente. Está apenas sobrecarregada e sozinha nos próprios pensamentos.</p>
                     </div>
-
-                    <Link to="/checkout" className="buy-button animate-pulse">
-                        QUERO VOLTAR PRA MIM
-                    </Link>
                 </div>
             </div>
         </section>

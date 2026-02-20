@@ -6,15 +6,15 @@ const Reviews = () => {
     return (
         <section className="reviews">
             <div className="container">
-                <h2 className="section-title">Leituras transformadoras</h2>
+                <h2 className="section-title">O que dizem sobre o processo</h2>
                 <div className="review-card">
-                    <Quote size={40} className="quote-icon" />
+                    <Quote className="quote-icon" size={48} />
                     <p className="review-text">
-                        "Eu sentia que estava me apagando aos poucos. Este guia não foi apenas uma leitura, foi o empurrão que eu precisava para parar de me autossabotar. Saí com clareza e, pela primeira vez em anos, sinto paz."
+                        "Eu não estava cansada. Eu estava me perdendo. O RETORNO me deu a clareza que eu não conseguia encontrar sozinha em anos de terapia tradicional. É direto, sem rodeios e transformador."
                     </p>
                     <div className="reviewer-info">
-                        <h4>Ana Clara S.</h4>
-                        <p className="reviewer-status">Leitora do Ebook</p>
+                        <h4>Marta V.</h4>
+                        <p className="reviewer-status">Processo finalizado</p>
                     </div>
                 </div>
             </div>
