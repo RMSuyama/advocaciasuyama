@@ -1,7 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Lock } from 'lucide-react';
-
 const Checkout = () => {
+    const [paid, setPaid] = useState(false);
+
+    const downloadPDF = () => {
+        const element = document.createElement("a");
+        const file = new Blob(["teste"], { type: 'text/plain' });
+        element.href = URL.createObjectURL(file);
+        element.download = "conteudo.pdf";
+        document.body.appendChild(element);
+        element.click();
+    };
+
     useEffect(() => {
         // Garantir que a página comece no topo
         window.scrollTo(0, 0);
@@ -17,7 +25,7 @@ const Checkout = () => {
             }
 
             if (window.MercadoPago) {
-                const mp = new window.MercadoPago('YOUR_PUBLIC_KEY', {
+                const mp = new window.MercadoPago('APP_USR-b31bbd5a-27d4-48ce-a1f3-5586f806cbe8', {
                     locale: 'pt-BR'
                 });
                 const bricksBuilder = mp.bricks();
@@ -40,17 +48,14 @@ const Checkout = () => {
                             // brick pronto
                         },
                         onSubmit: ({ selectedPaymentMethod, formData }) => {
+                            // Simulação de sucesso para teste local
                             return new Promise((resolve, reject) => {
-                                fetch("/process_payment", {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                    },
-                                    body: JSON.stringify(formData),
-                                })
-                                    .then((response) => response.json())
-                                    .then((response) => resolve())
-                                    .catch((error) => reject());
+                                console.log("Simulando pagamento...", formData);
+                                setTimeout(() => {
+                                    setPaid(true);
+                                    downloadPDF();
+                                    resolve();
+                                }, 2000);
                             });
                         },
                         onError: (error) => {
@@ -68,6 +73,31 @@ const Checkout = () => {
 
         initMercadoPago();
     }, []);
+
+    if (paid) {
+        return (
+            <div className="min-h-screen bg-dark flex flex-col items-center justify-center p-4 text-center font-inter text-white">
+                <div className="bg-neutral-900 p-12 rounded-[40px] border border-emerald-500/20 shadow-2xl max-w-lg">
+                    <div className="w-20 h-20 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-emerald-500/20">
+                        <ShieldCheck size={40} className="text-emerald-500" />
+                    </div>
+                    <h2 className="text-3xl font-black mb-4 tracking-tight">Pagamento Confirmado!</h2>
+                    <p className="text-neutral-400 font-light mb-10 italic">
+                        O seu material já foi liberado. O download deve começar automaticamente.
+                    </p>
+                    <button
+                        onClick={downloadPDF}
+                        className="bg-white text-black px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-neutral-200 transition-all"
+                    >
+                        BAIXAR NOVAMENTE
+                    </button>
+                    <p className="mt-8 text-[10px] text-neutral-600 uppercase tracking-widest font-bold">
+                        Obrigado por confiar no processo.
+                    </p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-dark py-12 md:py-20 px-4 font-inter text-white overflow-y-auto">

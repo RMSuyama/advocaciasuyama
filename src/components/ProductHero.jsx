@@ -1,4 +1,3 @@
-```
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -25,9 +24,9 @@ const ProductHero = () => {
                         <p className="text-sm md:text-base text-muted max-w-lg mb-8 leading-relaxed font-light">
                             Se você sente que está se perdendo de si mesmo, este site não vende um ebook. Ele oferece uma saída.
                         </p>
-                        
-                        <Link 
-                            to="/checkout" 
+
+                        <Link
+                            to="/checkout"
                             className="group relative bg-white text-dark px-8 md:px-10 py-3 md:py-3.5 rounded-full text-xs md:text-sm font-black uppercase tracking-widest transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
                         >
                             <span className="relative z-10">QUERO VOLTAR PRA MIM</span>
@@ -39,7 +38,7 @@ const ProductHero = () => {
 
             {/* 2. Identification Section - VIEW 2 */}
             <section className="min-h-screen flex items-center justify-center py-10 px-4 bg-dark snap-start">
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
@@ -58,8 +57,8 @@ const ProductHero = () => {
                                 "perdeu o prazer pelas coisas simples que antes amava?",
                                 "está sempre se deixando para depois para agradar aos outros?"
                             ].map((text, i) => (
-                                <motion.li 
-                                    key={i} 
+                                <motion.li
+                                    key={i}
                                     initial={{ opacity: 0, x: -10 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
@@ -70,7 +69,7 @@ const ProductHero = () => {
                                 </motion.li>
                             ))}
                         </ul>
-                        
+
                         <div className="pt-6 border-t border-white/10">
                             <p className="text-[10px] text-muted font-light mb-1 uppercase tracking-widest">A verdade é uma só:</p>
                             <p className="text-lg md:text-xl font-black text-white leading-tight">
@@ -83,7 +82,7 @@ const ProductHero = () => {
 
             {/* 3. Belief Section - VIEW 3 */}
             <section className="min-h-screen flex items-center justify-center py-10 px-4 bg-dark snap-start">
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.5 }}
@@ -106,4 +105,3 @@ const ProductHero = () => {
 };
 
 export default ProductHero;
-```
