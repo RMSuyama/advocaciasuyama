@@ -1,12 +1,10 @@
 :root {
   --primary: #e63946;
-  /* Keeping red for urgency, but using it subtly */
   --bg-dark: #050505;
   --bg-card: #0a0a0a;
   --text-main: #ffffff;
   --text-muted: #888888;
   --accent: #d4af37;
-  /* A subtle gold/warm accent for 'rebirth/clarity' */
   --font-main: 'Inter', sans-serif;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -21,14 +19,18 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-dark);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5;
+  /* Slightly tighter line height */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  /* Reducing base font size */
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 960px;
+  /* Reduced from 1100px */
   margin: 0 auto;
 }
 
@@ -39,12 +41,12 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.3);
   }
 
   70% {
     transform: scale(1.02);
-    box-shadow: 0 0 0 20px rgba(230, 57, 70, 0);
+    box-shadow: 0 0 0 15px rgba(230, 57, 70, 0);
   }
 
   100% {
@@ -53,9 +55,9 @@ body {
   }
 }
 
-/* Scrollbar refinement */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  /* Narrower scrollbar */
 }
 
 ::-webkit-scrollbar-track {

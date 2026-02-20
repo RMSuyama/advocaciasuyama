@@ -1,23 +1,28 @@
 .reviews {
-    padding: 150px 0;
+    padding: 100px 0;
+    /* 150 -> 100 */
     background: #050505;
 }
 
 .reviews .section-title {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    /* 80 -> 60 */
     color: var(--text-muted);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    /* 1.2 -> 0.9 */
 }
 
 .review-card {
     background: #0a0a0a;
-    padding: 100px 80px;
-    border-radius: 60px;
-    max-width: 900px;
+    padding: 70px 50px;
+    /* 100/80 -> 70/50 */
+    border-radius: 40px;
+    max-width: 700px;
+    /* 900 -> 700 */
     margin: 0 auto;
     text-align: center;
     border: 1px solid #1a1a1a;
@@ -26,21 +31,25 @@
 
 .quote-icon {
     color: var(--accent);
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    /* 50 -> 35 */
     opacity: 0.5;
 }
 
 .review-text {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    /* 2.2 -> 1.6 */
     line-height: 1.4;
     font-weight: 300;
     font-style: italic;
     color: var(--text-main);
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    /* 60 -> 40 */
 }
 
 .reviewer-info h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* 1.5 -> 1.2 */
     font-weight: 900;
     margin-bottom: 5px;
 }
@@ -49,16 +58,17 @@
     color: var(--accent);
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    /* 0.8 -> 0.75 */
     letter-spacing: 0.1em;
 }
 
 @media (max-width: 768px) {
     .review-card {
-        padding: 60px 30px;
+        padding: 40px 20px;
     }
 
     .review-text {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }

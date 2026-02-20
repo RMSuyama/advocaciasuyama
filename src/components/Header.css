@@ -1,6 +1,7 @@
 .header {
     background-color: var(--bg-dark);
-    padding: 30px 0;
+    padding: 20px 0;
+    /* 30 -> 20 */
     border-bottom: 1px solid #1a1a1a;
     position: sticky;
     top: 0;
@@ -13,8 +14,13 @@
     align-items: center;
 }
 
+.logo-link {
+    text-decoration: none;
+}
+
 .logo-text {
-    font-size: 1.8rem;
+    font-size: 1.35rem;
+    /* 1.8 -> 1.35 */
     font-weight: 900;
     letter-spacing: 0.2em;
     color: var(--text-main);
