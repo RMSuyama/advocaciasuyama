@@ -51,14 +51,30 @@ const Checkout = () => {
                             // brick pronto
                         },
                         onSubmit: ({ selectedPaymentMethod, formData }) => {
-                            // Simulação de sucesso para teste local
                             return new Promise((resolve, reject) => {
-                                console.log("Simulando pagamento...", formData);
-                                setTimeout(() => {
-                                    setPaid(true);
-                                    downloadPDF();
-                                    resolve();
-                                }, 2000);
+                                // Para um checkout VERDADEIRO, você precisa desse endpoint no backend
+                                fetch("/api/process_payment", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify(formData),
+                                })
+                                    .then((response) => {
+                                        if (response.ok) {
+                                            setPaid(true);
+                                            downloadPDF();
+                                            resolve();
+                                        } else {
+                                            reject();
+                                        }
+                                    })
+                                    .catch((error) => {
+                                        console.error("Erro no pagamento:", error);
+                                        // Fallback para teste manual se desejar (remova em produção)
+                                        // setPaid(true); downloadPDF(); resolve();
+                                        reject();
+                                    });
                             });
                         },
                         onError: (error) => {
