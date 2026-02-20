@@ -1,5 +1,4 @@
 import React from 'react';
-import { Target, Search, RefreshCw, BarChart, ShieldCheck } from 'lucide-react';
 import './Features.css';
 
 const steps = [
@@ -19,9 +18,10 @@ const steps = [
 
 const Features = () => {
     return (
-        <section className="features">
-            <div className="container">
-                <div className="retorno-solucao section-margin">
+        <div className="features-page-sections">
+            {/* 1. Solution Section */}
+            <section className="retorno-solucao-section">
+                <div className="container">
                     <h2 className="section-title">O que é o RETORNO?</h2>
                     <p className="retorno-desc">Um processo breve, direto e profundo, focado em:</p>
                     <div className="transformations-grid">
@@ -32,8 +32,11 @@ const Features = () => {
                         <div className="transform-point"><span>✓</span> clarear decisões</div>
                     </div>
                 </div>
+            </section>
 
-                <div className="how-it-works section-margin">
+            {/* 2. How it works Section */}
+            <section className="how-it-works-section">
+                <div className="container">
                     <h2 className="section-title">Como funciona</h2>
                     <div className="steps-container">
                         {steps.map((s, i) => (
@@ -45,22 +48,27 @@ const Features = () => {
                         ))}
                     </div>
                 </div>
+            </section>
 
-                <div className="target-audience section-margin">
-                    <h2 className="section-title">Para quem é</h2>
-                    <div className="audience-list">
-                        <p><span>✔</span> Pessoas esgotadas que não sabem por onde começar</p>
-                        <p><span>✔</span> Pessoas confusas que sentem que a mente está um caos</p>
-                        <p><span>✔</span> Pessoas que sentem que estão se abandonando aos poucos</p>
-                        <p><span>✔</span> Pessoas que querem voltar a viver com sentido e presença</p>
-                    </div>
-                    <div className="not-for-box">
-                        <p><strong>Não é para quem quer frases bonitas.</strong></p>
-                        <p>É para quem quer mudança real.</p>
+            {/* 3. Target Audience Section */}
+            <section className="target-audience-section">
+                <div className="container">
+                    <div className="target-audience-card">
+                        <h2 className="section-title">Para quem é</h2>
+                        <div className="audience-list">
+                            <p><span>✔</span> Pessoas esgotadas que não sabem por onde começar</p>
+                            <p><span>✔</span> Pessoas confusas que sentem que a mente está um caos</p>
+                            <p><span>✔</span> Pessoas que sentem que estão se abandonando aos poucos</p>
+                            <p><span>✔</span> Pessoas que querem voltar a viver com sentido e presença</p>
+                        </div>
+                        <div className="not-for-box">
+                            <p><strong>Não é para quem quer frases bonitas.</strong></p>
+                            <p>É para quem quer mudança real.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 

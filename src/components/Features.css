@@ -1,18 +1,14 @@
-.features {
-    padding: 80px 0;
-    /* 100 -> 80 */
-    background: #050505;
+.features-page-sections {
+    background-color: #050505;
 }
 
-.retorno-solucao {
+.retorno-solucao-section {
+    padding: 80px 0;
     text-align: center;
-    margin-bottom: 80px;
-    /* 120 -> 80 */
 }
 
 .section-title {
     font-size: 2.2rem;
-    /* 3 -> 2.2 */
     font-weight: 900;
     margin-bottom: 35px;
     letter-spacing: -0.02em;
@@ -20,7 +16,6 @@
 
 .retorno-desc {
     font-size: 1.2rem;
-    /* 1.5 -> 1.2 */
     color: var(--text-muted);
     margin-bottom: 40px;
 }
@@ -36,14 +31,13 @@
     background: #0a0a0a;
     border: 1px solid #1a1a1a;
     padding: 15px 30px;
-    /* 20/40 -> 15/30 */
     border-radius: 100px;
     font-size: 0.95rem;
-    /* 1.1 -> 0.95 */
     display: flex;
     gap: 10px;
     align-items: center;
     transition: var(--transition);
+    color: var(--text-main);
 }
 
 .transform-point span {
@@ -56,17 +50,19 @@
     transform: translateY(-4px);
 }
 
+.how-it-works-section {
+    padding: 80px 0;
+}
+
 .steps-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    /* 30 -> 20 */
 }
 
 .step-card-modern {
     background: #0a0a0a;
     padding: 40px 30px;
-    /* 60/40 -> 40/30 */
     border-radius: 24px;
     border: 1px solid #1a1a1a;
     position: relative;
@@ -78,7 +74,6 @@
     top: -15px;
     right: 30px;
     font-size: 3rem;
-    /* 4 -> 3 */
     font-weight: 900;
     color: #111;
     z-index: 0;
@@ -88,7 +83,6 @@
     position: relative;
     z-index: 1;
     font-size: 1.15rem;
-    /* 1.4 -> 1.15 */
     margin-bottom: 15px;
     color: var(--accent);
 }
@@ -98,17 +92,21 @@
     z-index: 1;
     color: var(--text-muted);
     font-size: 0.95rem;
-    /* 1.1 -> 0.95 */
     line-height: 1.5;
 }
 
-.target-audience {
+.target-audience-section {
+    padding: 80px 0;
+}
+
+.target-audience-card {
     background: #0a0a0a;
     padding: 70px 40px;
-    /* 100/60 -> 70/40 */
     border-radius: 30px;
     border: 1px solid #111;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .audience-list {
@@ -121,7 +119,6 @@
 
 .audience-list p {
     font-size: 1.15rem;
-    /* 1.4 -> 1.15 */
     color: #ccc;
     display: flex;
     gap: 12px;
@@ -135,7 +132,6 @@
     border-top: 1px solid #222;
     padding-top: 35px;
     font-size: 1rem;
-    /* 1.25 -> 1 */
 }
 
 .not-for-box strong {
@@ -151,7 +147,7 @@
         font-size: 1.8rem;
     }
 
-    .target-audience {
+    .target-audience-card {
         padding: 30px 15px;
     }
 
