@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, Lock } from 'lucide-react';
+
 const Checkout = () => {
     const [paid, setPaid] = useState(false);
 
