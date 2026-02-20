@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #e63946;
   --bg-dark: #050505;
@@ -7,44 +11,42 @@
   --accent: #d4af37;
   --font-main: 'Inter', sans-serif;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --section-padding: 100px;
-  --section-padding-md: 70px;
-  --section-padding-sm: 50px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  body {
+    @apply bg-dark text-white font-inter antialiased overflow-x-hidden;
+    line-height: 1.5;
+  }
 }
 
-body {
-  font-family: var(--font-main);
-  background-color: var(--bg-dark);
-  color: var(--text-main);
-  line-height: 1.5;
-  /* Slightly tighter line height */
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  font-size: 15px;
-  /* Reducing base font size */
+@layer utilities {
+  .text-shadow-premium {
+    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
 }
 
-.container {
-  width: 90%;
-  max-width: 960px;
-  /* Reduced from 1100px */
-  margin: 0 auto;
+/* Custom scrollbar optimized for dark mode */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.animate-pulse {
-  animation: pulse 2s infinite;
+::-webkit-scrollbar-track {
+  @apply bg-dark;
 }
 
-@keyframes pulse {
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors;
+}
+
+@keyframes pulse-custom {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.3);
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
   }
 
   70% {
@@ -58,20 +60,6 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  /* Narrower scrollbar */
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #222;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #333;
+.animate-pulse-custom {
+  animation: pulse-custom 2s infinite;
 }
