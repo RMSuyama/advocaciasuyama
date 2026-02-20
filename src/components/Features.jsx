@@ -22,9 +22,9 @@ const Features = () => {
             {/* 1. Solution Section - VIEW 4 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 border-t border-white/5 snap-start">
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="container mx-auto max-w-3xl text-center"
                 >
@@ -67,9 +67,9 @@ const Features = () => {
                         {steps.map((s, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.2 }}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: i * 0.15, duration: 0.8 }}
                                 viewport={{ once: true }}
                                 className="group bg-card border border-white/5 p-8 md:p-10 rounded-[24px] relative overflow-hidden transition-all duration-500 hover:bg-neutral-900 hover:border-accent/30"
                             >
@@ -91,9 +91,9 @@ const Features = () => {
             {/* 3. Target Audience Section - VIEW 6 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.98 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="container mx-auto max-w-3xl"
                 >

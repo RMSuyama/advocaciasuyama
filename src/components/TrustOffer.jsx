@@ -7,8 +7,8 @@ const TrustOffer = () => {
     return (
         <section className="min-h-screen flex items-center justify-center py-16 bg-black px-4 font-inter snap-start">
             <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="container mx-auto max-w-3xl"

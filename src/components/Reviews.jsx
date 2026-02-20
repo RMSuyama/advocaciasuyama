@@ -6,9 +6,9 @@ const Reviews = () => {
     return (
         <section className="min-h-screen flex items-center justify-center py-16 bg-dark px-4 font-inter snap-start">
             <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: true }}
                 className="container mx-auto max-w-3xl"
             >
