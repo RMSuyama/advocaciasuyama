@@ -1,134 +1,122 @@
 .trust-offer {
-    padding: 80px 0;
-    /* 120 -> 80 */
+    padding: var(--section-padding) 0;
     background: #000;
 }
 
 .offer-box {
-    background: linear-gradient(145deg, #111, #080808);
-    border: 1px solid #222;
-    border-radius: 40px;
-    padding: 70px 40px;
-    /* 100/60 -> 70/40 */
+    background: linear-gradient(145deg, #0d0d0d, #050505);
+    border: 1px solid #1a1a1a;
+    border-radius: 50px;
+    padding: 90px 60px;
     text-align: center;
-    margin-bottom: 60px;
-    /* 80 -> 60 */
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
 }
 
 .offer-badge {
     background: var(--primary);
     color: white;
     display: inline-block;
-    padding: 6px 20px;
-    /* 8/25 -> 6/20 */
+    padding: 10px 30px;
     border-radius: 100px;
-    font-size: 0.8rem;
-    /* 0.9 -> 0.8 */
+    font-size: 0.85rem;
     font-weight: 900;
-    letter-spacing: 0.1em;
-    margin-bottom: 25px;
+    letter-spacing: 0.15em;
+    margin-bottom: 35px;
 }
 
 .offer-title {
-    font-size: 2.5rem;
-    /* 3.5 -> 2.5 */
+    font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 40px;
-    line-height: 1.1;
+    margin-bottom: 50px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .price-stack {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 
 .price-old {
     text-decoration: line-through;
     color: #444;
-    font-size: 1.2rem;
-    /* 1.5 -> 1.2 */
+    font-size: 1.4rem;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .price-main {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    gap: 8px;
+    gap: 10px;
     color: var(--accent);
 }
 
 .currency {
-    font-size: 1.5rem;
-    /* 2 -> 1.5 */
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
 .amount {
-    font-size: 4.2rem;
-    /* 6 -> 4.2 */
+    font-size: 5rem;
     font-weight: 900;
+    line-height: 1;
 }
 
 .price-note {
     color: var(--text-muted);
-    font-size: 0.95rem;
-    /* 1.1 -> 0.95 */
-    margin-top: 15px;
+    font-size: 1rem;
+    margin-top: 25px;
 }
 
 .last-call {
-    margin-top: 40px;
-    font-size: 1.1rem;
-    /* 1.25 -> 1.1 */
+    margin-top: 50px;
+    font-size: 1.2rem;
     color: var(--text-muted);
-    max-width: 500px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
+    line-height: 1.6;
 }
 
 .trust-badges {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    /* 40 -> 30 */
+    gap: 40px;
 }
 
 .trust-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     text-align: left;
 }
 
 .trust-item svg {
     color: var(--accent);
-    width: 24px;
-    /* Scaled down icon */
-    height: 24px;
 }
 
 .trust-item h4 {
-    font-size: 1rem;
-    /* 1.1 -> 1 */
-    margin-bottom: 4px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 800;
 }
 
 .trust-item p {
-    font-size: 0.85rem;
-    /* 0.9 -> 0.85 */
+    font-size: 0.95rem;
     color: var(--text-muted);
+    line-height: 1.4;
 }
 
 @media (max-width: 768px) {
     .offer-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .amount {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .trust-badges {
@@ -136,6 +124,6 @@
     }
 
     .offer-box {
-        padding: 40px 15px;
+        padding: 60px 25px;
     }
 }
