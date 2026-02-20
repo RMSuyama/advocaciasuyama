@@ -20,7 +20,7 @@ const Home = () => (
 
 function App() {
   return (
-    <div className="app">
+    <div className="app h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
       <PromoBanner />
       <Header />
       <main>

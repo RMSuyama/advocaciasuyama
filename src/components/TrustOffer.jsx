@@ -13,26 +13,26 @@ const TrustOffer = () => {
                 viewport={{ once: true }}
                 className="container mx-auto max-w-3xl"
             >
-                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-8 md:p-12 text-center mb-12 shadow-[0_40px_80px_rgba(0,0,0,0.6)] group hover:border-accent/20 transition-all duration-700">
+                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-6 md:p-10 text-center mb-8 shadow-[0_40px_80px_rgba(0,0,0,0.6)] group hover:border-accent/20 transition-all duration-700">
                     <div className="bg-primary text-white inline-block px-6 py-2 rounded-full text-[9px] font-black tracking-widest mb-6">
                         OFERTA ÚNICA
                     </div>
-                    <h2 className="text-xl md:text-3xl font-black mb-8 leading-tight tracking-tight">
+                    <h2 className="text-xl md:text-2xl font-black mb-6 leading-tight tracking-tight">
                         Recupere o controle da sua vida hoje.
                     </h2>
 
-                    <div className="mb-10">
-                        <span className="line-through text-neutral-800 text-base md:text-lg block mb-1 font-light opacity-50">De R$ 79,00</span>
+                    <div className="mb-8">
+                        <span className="line-through text-neutral-800 text-sm md:text-base block mb-1 font-light opacity-50">De R$ 79,00</span>
                         <div className="flex justify-center items-baseline gap-1 text-accent">
-                            <span className="text-lg md:text-xl font-light">R$</span>
-                            <span className="text-4xl md:text-6xl font-black leading-none tracking-tighter">39,90</span>
+                            <span className="text-base md:text-lg font-light">R$</span>
+                            <span className="text-3xl md:text-5xl font-black leading-none tracking-tighter">39,90</span>
                         </div>
-                        <p className="text-neutral-500 text-sm md:text-base mt-3 font-light italic opacity-80">Pagamento único. Acesso imediato.</p>
+                        <p className="text-neutral-500 text-[10px] md:text-xs mt-2 font-light italic opacity-80">Pagamento único. Acesso imediato.</p>
                     </div>
 
                     <Link
                         to="/checkout"
-                        className="group relative inline-block bg-white text-black px-8 md:px-10 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-wider transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                        className="group relative inline-block bg-white text-black px-6 md:px-8 py-3 md:py-3.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-wider transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                     >
                         <span className="relative z-10">QUERO PARAR DE ME ABANDONAR</span>
                         <div className="absolute inset-0 rounded-full bg-white opacity-20 blur-lg group-hover:opacity-40 transition-opacity animate-pulse"></div>

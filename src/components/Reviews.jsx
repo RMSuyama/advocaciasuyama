@@ -18,7 +18,7 @@ const Reviews = () => {
                 <div className="bg-card border border-white/5 p-10 md:p-16 rounded-[40px] text-center relative shadow-2xl backdrop-blur-sm group hover:border-accent/10 transition-colors duration-700">
                     <Quote className="text-accent mx-auto mb-8 opacity-60 group-hover:scale-110 transition-transform duration-700" size={40} />
                     <p className="text-xl md:text-2xl font-light italic leading-relaxed text-white mb-10">
-                        "Eu não estava cansada. Eu estava me perdendo. O RETORNO me deu a clareza que eu não conseguia encontrar sozinha em anos de terapia tradicional. É direto, sem rodeios e transformador."
+                        "Eu não estava cansada. Eu estava me perdendo. O Ponto de Ruptura me deu a clareza que eu não conseguia encontrar sozinha em anos de terapia tradicional. É direto, sem rodeios e transformador."
                     </p>
                     <div className="pt-6 border-t border-white/5">
                         <h4 className="text-lg md:text-xl font-black mb-1">Marta V.</h4>

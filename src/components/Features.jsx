@@ -18,7 +18,7 @@ const steps = [
 
 const Features = () => {
     return (
-        <div className="bg-dark text-white font-inter h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+        <div className="bg-dark text-white font-inter">
             {/* 1. Solution Section - VIEW 4 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 border-t border-white/5 snap-start">
                 <motion.div

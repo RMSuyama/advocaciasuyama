@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ProductHero = () => {
     return (
-        <div className="bg-dark text-white font-inter h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+        <div className="bg-dark text-white font-inter">
             {/* 1. Impact Section - VIEW 1 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark snap-start">
                 <div className="container mx-auto max-w-3xl text-center">
