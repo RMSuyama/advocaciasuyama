@@ -69,12 +69,12 @@ const ProductHero = () => {
             {/* 3. Belief Section */}
             <section className="py-12 md:py-20 px-4 bg-dark text-center">
                 <div className="container mx-auto max-w-2xl">
-                    <div className="text-xl md:text-2xl font-light leading-snug space-y-3">
+                    <div className="text-2xl md:text-3xl font-light leading-snug space-y-4">
                         <p>Você não precisa de "mais força de vontade".</p>
                         <p className="text-accent font-medium">
-                            Você precisa de <span className="text-base md:text-xl text-white font-black">clareza, espaço mental e uma nova reorganização interna.</span>
+                            Você precisa de <span className="text-xl md:text-2xl text-white font-black">clareza, espaço mental e uma nova reorganização interna.</span>
                         </p>
-                        <p className="text-sm md:text-base text-muted font-normal pt-8 max-w-lg mx-auto">
+                        <p className="text-base md:text-lg text-muted font-normal pt-10 max-w-lg mx-auto">
                             A maioria das pessoas não está doente. Está apenas sobrecarregada e sozinha nos próprios pensamentos.
                         </p>
                     </div>
