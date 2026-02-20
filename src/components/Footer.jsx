@@ -27,7 +27,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-muted">
                                 <ShieldCheck className="w-5 h-5 text-accent flex-shrink-0" />
-                                <span>Inscrição OAB/SP [Número]</span>
+                                <span>Inscrição OAB/SP 484.261</span>
                             </li>
                         </ul>
                     </div>
