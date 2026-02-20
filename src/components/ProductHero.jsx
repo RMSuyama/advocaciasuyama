@@ -6,7 +6,7 @@ const ProductHero = () => {
     return (
         <div className="bg-dark text-white font-inter">
             {/* 1. Impact Section */}
-            <section className="min-h-[60vh] flex items-center py-12 md:py-16 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark">
+            <section className="min-h-[60vh] flex items-center pt-32 pb-16 md:pt-40 md:pb-24 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark">
                 <div className="container mx-auto max-w-3xl text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
