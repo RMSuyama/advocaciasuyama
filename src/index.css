@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #e63946;
-  --color-dark: #050505;
-  --color-card: #0a0a0a;
-  --color-accent: #d4af37;
-  --color-muted: #888888;
+  --color-primary: #FFFFFF;
+  --color-navy: #0F172A;
+  --color-dark: #020617;
+  --color-card: #1E293B;
+  --color-accent: #3B82F6;
+  --color-muted: #94A3B8;
   --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-dark text-white font-inter antialiased overflow-x-hidden;
   }

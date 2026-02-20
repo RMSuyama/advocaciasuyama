@@ -1,45 +1,31 @@
-import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
 import PromoBanner from './components/PromoBanner';
 import Header from './components/Header';
-import ProductHero from './components/ProductHero';
-import Features from './components/Features';
-import Reviews from './components/Reviews';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
+import Eligibility from './components/Eligibility';
+import Benefits from './components/Benefits';
+import Process from './components/Process';
+import FAQ from './components/FAQ';
+import OfficeInfo from './components/OfficeInfo';
+import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
-import Checkout from './components/Checkout';
-import TrustOffer from './components/TrustOffer';
-
-const Home = () => {
-  useEffect(() => {
-    // Garantir que ao carregar a Home, o scroll comece no topo
-    const scrollContainer = document.querySelector('.home-scroll-container');
-    if (scrollContainer) scrollContainer.scrollTop = 0;
-  }, []);
-
-  return (
-    <div className="home-scroll-container h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth bg-dark">
-      <ProductHero />
-      <Features />
-      <Reviews />
-      <TrustOffer />
-      <footer className="snap-start">
-        <Footer />
-      </footer>
-    </div>
-  );
-};
 
 function App() {
   return (
-    <div className="app bg-dark min-h-screen text-white font-inter">
-      <PromoBanner />
+    <div className="app bg-dark h-[100dvh] overflow-y-auto snap-y snap-proximity text-white font-inter selection:bg-primary selection:text-navy">
       <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><Hero /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><AboutSection /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><OfficeInfo /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><Eligibility /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><Benefits /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><Process /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><FAQ /></div>
+        <div className="snap-start min-h-[100dvh] flex items-center justify-center p-4"><LeadForm /></div>
       </main>
+      <div className="snap-start pt-10"><Footer /></div>
     </div>
   );
 }
