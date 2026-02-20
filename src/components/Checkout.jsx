@@ -3,14 +3,25 @@ import { ShieldCheck, Lock } from 'lucide-react';
 
 const Checkout = () => {
     useEffect(() => {
-        // Mercado Pago Checkout Brick Integration
-        if (window.MercadoPago) {
-            const mp = new window.MercadoPago('YOUR_PUBLIC_KEY', {
-                locale: 'pt-BR'
-            });
-            const bricksBuilder = mp.bricks();
+        // Garantir que a página comece no topo
+        window.scrollTo(0, 0);
 
-            const renderPaymentBrick = async (bricksBuilder) => {
+        const initMercadoPago = async () => {
+            // Verificar se o script já carregou (pode demorar um pouco)
+            if (!window.MercadoPago) {
+                let attempts = 0;
+                while (!window.MercadoPago && attempts < 10) {
+                    await new Promise(r => setTimeout(r, 500));
+                    attempts++;
+                }
+            }
+
+            if (window.MercadoPago) {
+                const mp = new window.MercadoPago('YOUR_PUBLIC_KEY', {
+                    locale: 'pt-BR'
+                });
+                const bricksBuilder = mp.bricks();
+
                 const settings = {
                     initialization: {
                         amount: 39.90, // Valor total
@@ -52,9 +63,10 @@ const Checkout = () => {
                     'paymentBrick_container',
                     settings
                 );
-            };
-            renderPaymentBrick(bricksBuilder);
-        }
+            }
+        };
+
+        initMercadoPago();
     }, []);
 
     return (
