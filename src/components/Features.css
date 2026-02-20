@@ -1,0 +1,86 @@
+.features {
+    padding: 100px 0;
+    background-color: #050505;
+}
+
+.retorno-explanation {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.retorno-desc {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.points-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.point {
+    background: #111;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid #222;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.step-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #1a1a1a;
+}
+
+.step-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: var(--text-muted);
+}
+
+.for-who {
+    text-align: center;
+    background: #111;
+    padding: 80px;
+    border-radius: 40px;
+}
+
+.who-list {
+    margin: 40px 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.not-for {
+    color: var(--text-muted);
+    margin-top: 40px;
+}
+
+@media (max-width: 968px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .for-who {
+        padding: 40px 20px;
+    }
+}

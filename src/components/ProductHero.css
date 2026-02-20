@@ -1,0 +1,109 @@
+.product-hero {
+    padding: 60px 0;
+    background-color: var(--bg-dark);
+}
+
+.product-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-image-container {
+    margin-bottom: 60px;
+}
+
+.ruptura-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+.identificacao {
+    margin: 80px 0;
+    text-align: left;
+    background: var(--bg-card);
+    padding: 50px;
+    border-radius: 24px;
+}
+
+.identificacao h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.cansado-de {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.cansado-de li {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.cansado-de span {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.esgotamento-msg {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    font-size: 1.2rem;
+}
+
+.esgotamento-msg .highlight {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-top: 10px;
+}
+
+.quebra-crenca {
+    margin: 80px 0;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+.quebra-crenca .sub-text {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-top: 20px;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 25px 60px;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.buy-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+}
+
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 3rem;
+    }
+
+    .identificacao {
+        padding: 30px;
+    }
+
+    .quebra-crenca {
+        font-size: 1.4rem;
+    }
+}
