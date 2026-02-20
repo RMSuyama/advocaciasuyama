@@ -1,17 +1,19 @@
+```javascript
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const ProductHero = () => {
     return (
-        <div className="bg-dark text-white font-inter">
+        <div className="bg-dark text-white font-inter h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
             {/* 1. Impact Section - VIEW 1 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark snap-start">
                 <div className="container mx-auto max-w-3xl text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        viewport={{ once: true }}
                         className="flex flex-col items-center"
                     >
                         <span className="block text-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-4">
@@ -23,12 +25,13 @@ const ProductHero = () => {
                         <p className="text-base md:text-lg text-muted max-w-xl mb-10 leading-relaxed font-light">
                             Se você sente que está se perdendo de si mesmo, este site não vende um ebook. Ele oferece uma saída.
                         </p>
-
-                        <Link
-                            to="/checkout"
-                            className="bg-white text-dark px-10 md:px-12 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-widest hover:bg-accent transition-all duration-300 hover:-translate-y-1 shadow-2xl animate-pulse"
+                        
+                        <Link 
+                            to="/checkout" 
+                            className="group relative bg-white text-dark px-10 md:px-12 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-widest transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
                         >
-                            QUERO VOLTAR PRA MIM
+                            <span className="relative z-10">QUERO VOLTAR PRA MIM</span>
+                            <div className="absolute inset-0 rounded-full bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md -z-0"></div>
                         </Link>
                     </motion.div>
                 </div>
@@ -36,8 +39,14 @@ const ProductHero = () => {
 
             {/* 2. Identification Section - VIEW 2 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
-                <div className="container mx-auto max-w-2xl w-full">
-                    <div className="bg-card border border-white/5 p-6 md:p-10 rounded-[30px] shadow-2xl backdrop-blur-sm">
+                <motion.div 
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}
+                    className="container mx-auto max-w-2xl w-full"
+                >
+                    <div className="bg-card border border-white/5 p-6 md:p-10 rounded-[30px] shadow-2xl backdrop-blur-sm group hover:border-white/10 transition-colors duration-700">
                         <h3 className="text-xl md:text-2xl font-extrabold mb-8 text-white">
                             Você sente que:
                         </h3>
@@ -49,13 +58,19 @@ const ProductHero = () => {
                                 "perdeu o prazer pelas coisas simples que antes amava?",
                                 "está sempre se deixando para depois para agradar aos outros?"
                             ].map((text, i) => (
-                                <li key={i} className="flex gap-3 text-sm md:text-base text-neutral-300 leading-relaxed italic">
+                                <motion.li 
+                                    key={i} 
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: i * 0.1 }}
+                                    className="flex gap-3 text-sm md:text-base text-neutral-300 leading-relaxed italic"
+                                >
                                     <span className="text-primary font-black">→</span>
                                     {text}
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-
+                        
                         <div className="pt-8 border-t border-white/10">
                             <p className="text-sm text-muted font-light mb-1">Isso não é preguiça. Não é drama. Não é fraqueza.</p>
                             <p className="text-xl md:text-2xl font-black text-white leading-tight">
@@ -63,12 +78,18 @@ const ProductHero = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* 3. Belief Section - VIEW 3 */}
             <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
-                <div className="container mx-auto max-w-2xl text-center">
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    className="container mx-auto max-w-2xl text-center"
+                >
                     <div className="text-2xl md:text-3xl font-light leading-snug space-y-4">
                         <p>Você não precisa de "mais força de vontade".</p>
                         <p className="text-accent font-medium">
@@ -78,10 +99,11 @@ const ProductHero = () => {
                             A maioria das pessoas não está doente. Está apenas sobrecarregada e sozinha nos próprios pensamentos.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </section>
         </div>
     );
 };
 
 export default ProductHero;
+```

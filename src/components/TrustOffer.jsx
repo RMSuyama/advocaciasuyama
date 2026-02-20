@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Calendar, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const TrustOffer = () => {
     return (
         <section className="min-h-screen flex items-center justify-center py-16 bg-black px-4 font-inter snap-start">
-            <div className="container mx-auto max-w-3xl">
-                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-8 md:p-12 text-center mb-12 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="container mx-auto max-w-3xl"
+            >
+                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-8 md:p-12 text-center mb-12 shadow-[0_40px_80px_rgba(0,0,0,0.6)] group hover:border-accent/20 transition-all duration-700">
                     <div className="bg-primary text-white inline-block px-6 py-2 rounded-full text-[9px] font-black tracking-widest mb-6">
                         OFERTA ÚNICA
                     </div>
@@ -20,14 +27,15 @@ const TrustOffer = () => {
                             <span className="text-lg md:text-xl font-light">R$</span>
                             <span className="text-4xl md:text-6xl font-black leading-none tracking-tighter">39,90</span>
                         </div>
-                        <p className="text-neutral-500 text-sm md:text-base mt-3 font-light italic">Pagamento único. Acesso imediato.</p>
+                        <p className="text-neutral-500 text-sm md:text-base mt-3 font-light italic opacity-80">Pagamento único. Acesso imediato.</p>
                     </div>
 
                     <Link
                         to="/checkout"
-                        className="bg-white text-black px-8 md:px-10 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-wider hover:bg-accent transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.05)] animate-pulse"
+                        className="group relative inline-block bg-white text-black px-8 md:px-10 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-wider transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                     >
-                        QUERO PARAR DE ME ABANDONAR
+                        <span className="relative z-10">QUERO PARAR DE ME ABANDONAR</span>
+                        <div className="absolute inset-0 rounded-full bg-white opacity-20 blur-lg group-hover:opacity-40 transition-opacity animate-pulse"></div>
                     </Link>
 
                     <p className="mt-8 text-sm md:text-base text-neutral-500 max-w-md mx-auto italic font-light leading-relaxed">
@@ -35,7 +43,7 @@ const TrustOffer = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 opacity-60 hover:opacity-100 transition-opacity duration-500">
                     {[
                         { icon: ShieldCheck, title: "Garantia Total", desc: "7 dias para testar sem riscos." },
                         { icon: Calendar, title: "Acesso Vitalício", desc: "O material será seu para sempre." },
@@ -50,7 +58,7 @@ const TrustOffer = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
