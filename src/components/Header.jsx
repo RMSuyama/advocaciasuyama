@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const scrollToTop = () => {
-        const app = document.querySelector('.app');
-        if (app) {
-            app.scrollTo({ top: 0, behavior: 'smooth' });
+        const container = document.querySelector('.home-scroll-container');
+        if (container) {
+            container.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
