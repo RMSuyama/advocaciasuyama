@@ -6,27 +6,27 @@ const ProductHero = () => {
     return (
         <div className="bg-dark text-white font-inter">
             {/* 1. Impact Section */}
-            <section className="min-h-[70vh] flex items-center py-20 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark">
-                <div className="container mx-auto max-w-4xl text-center">
+            <section className="min-h-[60vh] flex items-center py-12 md:py-16 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark">
+                <div className="container mx-auto max-w-3xl text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="flex flex-col items-center"
                     >
-                        <span className="block text-accent text-sm md:text-base font-bold uppercase tracking-[0.3em] mb-6">
+                        <span className="block text-accent text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] mb-4">
                             Pare por 3 minutos. Leia isso.
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-black leading-tight mb-8 tracking-tighter bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent">
+                        <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 tracking-tighter bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent">
                             Pare de se abandonar e recupere sua dignidade emocional
                         </h1>
-                        <p className="text-lg md:text-xl text-muted max-w-2xl mb-12 leading-relaxed font-light">
+                        <p className="text-base md:text-lg text-muted max-w-xl mb-10 leading-relaxed font-light">
                             Se você sente que está se perdendo de si mesmo, este site não vende um ebook. Ele oferece uma saída.
                         </p>
 
                         <Link
                             to="/checkout"
-                            className="bg-white text-dark px-8 md:px-14 py-4 md:py-6 rounded-full text-lg md:text-xl font-black uppercase tracking-widest hover:bg-accent transition-all duration-300 hover:-translate-y-1 shadow-2xl animate-pulse"
+                            className="bg-white text-dark px-10 md:px-12 py-3.5 md:py-4 rounded-full text-sm md:text-base font-black uppercase tracking-widest hover:bg-accent transition-all duration-300 hover:-translate-y-1 shadow-2xl animate-pulse"
                         >
                             QUERO VOLTAR PRA MIM
                         </Link>
@@ -35,13 +35,13 @@ const ProductHero = () => {
             </section>
 
             {/* 2. Identification Section */}
-            <section className="py-16 md:py-24 px-4 bg-dark">
-                <div className="container mx-auto max-w-3xl">
-                    <div className="bg-card border border-white/5 p-8 md:p-14 rounded-[40px] shadow-2xl backdrop-blur-sm">
-                        <h3 className="text-2xl md:text-3xl font-extrabold mb-10 text-white">
+            <section className="py-12 md:py-16 px-4 bg-dark">
+                <div className="container mx-auto max-w-2xl">
+                    <div className="bg-card border border-white/5 p-6 md:p-10 rounded-[30px] shadow-2xl backdrop-blur-sm">
+                        <h3 className="text-xl md:text-2xl font-extrabold mb-8 text-white">
                             Você sente que:
                         </h3>
-                        <ul className="space-y-6 mb-12">
+                        <ul className="space-y-4 mb-10">
                             {[
                                 "vive no automático, como se estivesse apenas assistindo sua vida?",
                                 "está sempre cansado, mesmo após uma noite inteira de sono?",
@@ -49,17 +49,17 @@ const ProductHero = () => {
                                 "perdeu o prazer pelas coisas simples que antes amava?",
                                 "está sempre se deixando para depois para agradar aos outros?"
                             ].map((text, i) => (
-                                <li key={i} className="flex gap-4 text-base md:text-lg text-neutral-300 leading-relaxed italic">
+                                <li key={i} className="flex gap-3 text-sm md:text-base text-neutral-300 leading-relaxed italic">
                                     <span className="text-primary font-black">→</span>
                                     {text}
                                 </li>
                             ))}
                         </ul>
 
-                        <div className="pt-10 border-t border-white/10">
-                            <p className="text-lg text-muted font-light mb-2">Isso não é preguiça. Não é drama. Não é fraqueza.</p>
-                            <p className="text-2xl md:text-3xl font-black text-white leading-tight">
-                                É <span className="border-b-4 border-primary">esgotamento emocional silencioso</span> por autoabandono.
+                        <div className="pt-8 border-t border-white/10">
+                            <p className="text-sm text-muted font-light mb-1">Isso não é preguiça. Não é drama. Não é fraqueza.</p>
+                            <p className="text-xl md:text-2xl font-black text-white leading-tight">
+                                É <span className="border-b-2 border-primary">esgotamento emocional silencioso</span> por autoabandono.
                             </p>
                         </div>
                     </div>
@@ -67,14 +67,14 @@ const ProductHero = () => {
             </section>
 
             {/* 3. Belief Section */}
-            <section className="py-20 md:py-32 px-4 bg-dark text-center">
-                <div className="container mx-auto max-w-3xl">
-                    <div className="text-2xl md:text-4xl font-light leading-snug space-y-4">
+            <section className="py-12 md:py-20 px-4 bg-dark text-center">
+                <div className="container mx-auto max-w-2xl">
+                    <div className="text-xl md:text-2xl font-light leading-snug space-y-3">
                         <p>Você não precisa de "mais força de vontade".</p>
                         <p className="text-accent font-medium">
-                            Você precisa de <span className="text-white font-black">clareza, espaço mental e uma nova reorganização interna.</span>
+                            Você precisa de <span className="text-base md:text-xl text-white font-black">clareza, espaço mental e uma nova reorganização interna.</span>
                         </p>
-                        <p className="text-base md:text-xl text-muted font-normal pt-10 max-w-xl mx-auto">
+                        <p className="text-sm md:text-base text-muted font-normal pt-8 max-w-lg mx-auto">
                             A maioria das pessoas não está doente. Está apenas sobrecarregada e sozinha nos próprios pensamentos.
                         </p>
                     </div>

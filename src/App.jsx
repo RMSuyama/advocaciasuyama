@@ -8,7 +8,6 @@ import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import Checkout from './components/Checkout';
 import TrustOffer from './components/TrustOffer';
-import './index.css';
 
 const Home = () => (
   <>

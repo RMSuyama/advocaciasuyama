@@ -1,65 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --primary: #e63946;
-  --bg-dark: #050505;
-  --bg-card: #0a0a0a;
-  --text-main: #ffffff;
-  --text-muted: #888888;
-  --accent: #d4af37;
-  --font-main: 'Inter', sans-serif;
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+@theme {
+  --color-primary: #e63946;
+  --color-dark: #050505;
+  --color-card: #0a0a0a;
+  --color-accent: #d4af37;
+  --color-muted: #888888;
+  --font-inter: 'Inter', sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-dark text-white font-inter antialiased overflow-x-hidden;
-    line-height: 1.5;
   }
 }
 
-@layer utilities {
-  .text-shadow-premium {
-    text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  }
-
-  .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
-  }
-}
-
-/* Custom scrollbar optimized for dark mode */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark;
+  background: #050505;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors;
-}
-
-@keyframes pulse-custom {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-  }
-
-  70% {
-    transform: scale(1.02);
-    box-shadow: 0 0 0 15px rgba(230, 57, 70, 0);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-  }
-}
-
-.animate-pulse-custom {
-  animation: pulse-custom 2s infinite;
+  background: #262626;
+  border-radius: 10px;
 }

@@ -3,19 +3,19 @@ import { Quote } from 'lucide-react';
 
 const Reviews = () => {
     return (
-        <section className="py-24 md:py-32 bg-dark px-4 font-inter">
-            <div className="container mx-auto max-w-4xl">
-                <h2 className="text-center mb-16 md:mb-24 text-neutral-500 font-light uppercase tracking-[0.25em] text-xs md:text-sm">
+        <section className="py-16 md:py-24 bg-dark px-4 font-inter">
+            <div className="container mx-auto max-w-3xl">
+                <h2 className="text-center mb-12 md:mb-16 text-neutral-500 font-light uppercase tracking-[0.25em] text-[10px] md:text-xs">
                     O que dizem sobre o processo
                 </h2>
-                <div className="bg-card border border-white/5 p-12 md:p-24 rounded-[60px] text-center relative shadow-2xl backdrop-blur-sm">
-                    <Quote className="text-accent mx-auto mb-10 opacity-60" size={60} />
-                    <p className="text-2xl md:text-4xl font-light italic leading-relaxed text-white mb-12">
+                <div className="bg-card border border-white/5 p-10 md:p-16 rounded-[40px] text-center relative shadow-2xl backdrop-blur-sm">
+                    <Quote className="text-accent mx-auto mb-8 opacity-60" size={40} />
+                    <p className="text-xl md:text-2xl font-light italic leading-relaxed text-white mb-10">
                         "Eu não estava cansada. Eu estava me perdendo. O RETORNO me deu a clareza que eu não conseguia encontrar sozinha em anos de terapia tradicional. É direto, sem rodeios e transformador."
                     </p>
-                    <div className="pt-8 border-t border-white/5">
-                        <h4 className="text-xl md:text-2xl font-black mb-1">Marta V.</h4>
-                        <p className="text-accent font-bold uppercase tracking-widest text-xs">Processo finalizado</p>
+                    <div className="pt-6 border-t border-white/5">
+                        <h4 className="text-lg md:text-xl font-black mb-1">Marta V.</h4>
+                        <p className="text-accent font-bold uppercase tracking-widest text-[10px]">Processo finalizado</p>
                     </div>
                 </div>
             </div>
