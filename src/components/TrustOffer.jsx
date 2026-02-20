@@ -4,9 +4,9 @@ import { ShieldCheck, Calendar, Lock } from 'lucide-react';
 
 const TrustOffer = () => {
     return (
-        <section className="py-12 md:py-20 bg-black px-4 font-inter">
+        <section className="min-h-screen flex items-center justify-center py-16 bg-black px-4 font-inter snap-start">
             <div className="container mx-auto max-w-3xl">
-                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-8 md:p-12 text-center mb-12 shadow-[0_40px_80px_rgba(0,0,0,0.6)] mt-8">
+                <div className="bg-gradient-to-br from-neutral-900 to-black border border-neutral-800 rounded-[32px] p-8 md:p-12 text-center mb-12 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
                     <div className="bg-primary text-white inline-block px-6 py-2 rounded-full text-[9px] font-black tracking-widest mb-6">
                         OFERTA ÚNICA
                     </div>

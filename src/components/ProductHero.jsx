@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const ProductHero = () => {
     return (
         <div className="bg-dark text-white font-inter">
-            {/* 1. Impact Section */}
-            <section className="min-h-[60vh] flex items-center pt-32 pb-16 md:pt-40 md:pb-24 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark">
+            {/* 1. Impact Section - VIEW 1 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-neutral-900 to-dark snap-start">
                 <div className="container mx-auto max-w-3xl text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -34,9 +34,9 @@ const ProductHero = () => {
                 </div>
             </section>
 
-            {/* 2. Identification Section */}
-            <section className="py-12 md:py-16 px-4 bg-dark">
-                <div className="container mx-auto max-w-2xl">
+            {/* 2. Identification Section - VIEW 2 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
+                <div className="container mx-auto max-w-2xl w-full">
                     <div className="bg-card border border-white/5 p-6 md:p-10 rounded-[30px] shadow-2xl backdrop-blur-sm">
                         <h3 className="text-xl md:text-2xl font-extrabold mb-8 text-white">
                             Você sente que:
@@ -66,9 +66,9 @@ const ProductHero = () => {
                 </div>
             </section>
 
-            {/* 3. Belief Section */}
-            <section className="py-12 md:py-20 px-4 bg-dark text-center">
-                <div className="container mx-auto max-w-2xl">
+            {/* 3. Belief Section - VIEW 3 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
+                <div className="container mx-auto max-w-2xl text-center">
                     <div className="text-2xl md:text-3xl font-light leading-snug space-y-4">
                         <p>Você não precisa de "mais força de vontade".</p>
                         <p className="text-accent font-medium">

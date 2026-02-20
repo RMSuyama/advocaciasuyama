@@ -18,8 +18,8 @@ const steps = [
 const Features = () => {
     return (
         <div className="bg-dark text-white font-inter">
-            {/* 1. Solution Section */}
-            <section className="py-16 md:py-24 px-4 border-t border-white/5">
+            {/* 1. Solution Section - VIEW 4 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 border-t border-white/5 snap-start">
                 <div className="container mx-auto max-w-3xl text-center">
                     <h2 className="text-2xl md:text-4xl font-black mb-8 tracking-tight leading-tight">
                         O Ponto de Ruptura
@@ -44,8 +44,8 @@ const Features = () => {
                 </div>
             </section>
 
-            {/* 2. How it works Section */}
-            <section className="py-16 md:py-24 px-4 bg-dark">
+            {/* 2. How it works Section - VIEW 5 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
                 <div className="container mx-auto max-w-4xl">
                     <h2 className="text-2xl md:text-3xl font-black mb-12 text-center tracking-tight">
                         Como funciona
@@ -68,8 +68,8 @@ const Features = () => {
                 </div>
             </section>
 
-            {/* 3. Target Audience Section */}
-            <section className="py-16 md:py-24 px-4 bg-dark">
+            {/* 3. Target Audience Section - VIEW 6 */}
+            <section className="min-h-screen flex items-center justify-center py-16 px-4 bg-dark snap-start">
                 <div className="container mx-auto max-w-3xl">
                     <div className="bg-card border border-white/5 p-10 md:p-14 rounded-[30px] text-center shadow-inner">
                         <h2 className="text-2xl md:text-3xl font-black mb-10 tracking-tight text-white">Para quem é</h2>
@@ -93,6 +93,9 @@ const Features = () => {
                 </div>
             </section>
         </div>
+    );
+};
+        </div >
     );
 };
 

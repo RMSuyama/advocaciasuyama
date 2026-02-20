@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 const Reviews = () => {
     return (
-        <section className="py-16 md:py-24 bg-dark px-4 font-inter">
+        <section className="min-h-screen flex items-center justify-center py-16 bg-dark px-4 font-inter snap-start">
             <div className="container mx-auto max-w-3xl">
                 <h2 className="text-center mb-12 md:mb-16 text-neutral-500 font-light uppercase tracking-[0.25em] text-[10px] md:text-xs">
                     O que dizem sobre o processo
