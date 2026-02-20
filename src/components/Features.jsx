@@ -22,7 +22,7 @@ const Features = () => {
             <section className="py-20 md:py-32 px-4 border-t border-white/5">
                 <div className="container mx-auto max-w-4xl text-center">
                     <h2 className="text-3xl md:text-5xl font-black mb-12 tracking-tight leading-tight">
-                        O que é o RETORNO?
+                        O Ponto de Ruptura
                     </h2>
                     <p className="text-xl md:text-2xl text-muted font-light mb-16">
                         Um processo breve, direto e profundo, focado em:

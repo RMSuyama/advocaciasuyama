@@ -1,4 +1,3 @@
-```javascript
 import React, { useState } from 'react';
 import { ShieldCheck, CreditCard, Wallet, FileText, Lock } from 'lucide-react';
 
@@ -18,21 +17,21 @@ const Checkout = () => {
                         {/* Form Section */}
                         <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/5">
                             <h3 className="text-xl font-black mb-10 border-b border-white/10 pb-4">Informações de Acesso</h3>
-                            
+
                             <div className="space-y-6">
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-neutral-500 uppercase tracking-widest">Nome Completo</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="Seu nome completo" 
+                                    <input
+                                        type="text"
+                                        placeholder="Seu nome completo"
                                         className="w-full bg-black border border-neutral-700 py-3 px-4 rounded-xl text-white outline-none focus:border-accent font-light"
                                     />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-neutral-500 uppercase tracking-widest">E-mail</label>
-                                    <input 
-                                        type="email" 
-                                        placeholder="seu@email.com" 
+                                    <input
+                                        type="email"
+                                        placeholder="seu@email.com"
                                         className="w-full bg-black border border-neutral-700 py-3 px-4 rounded-xl text-white outline-none focus:border-accent font-light"
                                     />
                                     <p className="text-[10px] text-neutral-500 italic mt-2">Você receberá o seu acesso neste e-mail.</p>
@@ -50,11 +49,10 @@ const Checkout = () => {
                                         <button
                                             key={method.id}
                                             onClick={() => setPaymentMethod(method.id)}
-                                            className={`flex flex - col items - center gap - 3 p - 4 rounded - xl border transition - all duration - 300 ${
-    paymentMethod === method.id
-        ? 'bg-primary/10 border-primary text-white scale-105'
-        : 'bg-black border-neutral-700 text-neutral-500 hover:border-neutral-500'
-} `}
+                                            className={`flex flex-col items-center gap-3 p-4 rounded-xl border transition-all duration-300 ${paymentMethod === method.id
+                                                ? 'bg-primary/10 border-primary text-white scale-105'
+                                                : 'bg-black border-neutral-700 text-neutral-500 hover:border-neutral-500'
+                                                }`}
                                         >
                                             <method.icon size={20} />
                                             <span className="text-[10px] font-black tracking-widest uppercase">{method.label}</span>
@@ -76,10 +74,10 @@ const Checkout = () => {
                         {/* Order Summary */}
                         <div className="p-8 md:p-12 bg-neutral-900/50">
                             <h3 className="text-xl font-black mb-10 border-b border-white/10 pb-4">Resumo da Ordem</h3>
-                            
+
                             <div className="space-y-6">
                                 <div className="flex justify-between text-neutral-400 font-light text-base italic border-b border-white/5 pb-4">
-                                    <span>RETORNO — Projeto Digital</span>
+                                    <span>Material Digital de Transformação</span>
                                     <span className="text-white font-medium">R$ 79,00</span>
                                 </div>
                                 <div className="flex justify-between text-accent font-light text-base italic border-b border-white/5 pb-4">
@@ -110,4 +108,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-```
