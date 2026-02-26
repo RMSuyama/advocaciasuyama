@@ -5,10 +5,30 @@ import { Send, CheckCircle2 } from 'lucide-react';
 const LeadForm = () => {
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Simulação de envio
-        setTimeout(() => setSubmitted(true), 800);
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('http://localhost:3001/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+            } else {
+                console.error('Erro ao enviar lead');
+                alert('Erro ao enviar. Tente novamente mais tarde.');
+            }
+        } catch (error) {
+            console.error('Erro de conexão:', error);
+            alert('Erro de conexão com o servidor.');
+        }
     };
 
     if (submitted) {
@@ -38,83 +58,46 @@ const LeadForm = () => {
     }
 
     return (
-        <section id="contato" className="py-24 px-4 bg-dark">
+        <section id="contato" className="py-8 px-4 bg-dark">
             <div className="container mx-auto">
-                <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12 bg-card border border-white/5 rounded-3xl overflow-hidden shadow-2xl">
-                    <div className="p-8 md:p-12 bg-navy flex flex-col justify-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6 italic text-white leading-tight">
-                            Conheça seus <span className="text-accent italic">direitos!</span>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-xl mx-auto bg-card border border-white/5 rounded-3xl overflow-hidden shadow-2xl"
+                >
+                    <div className="p-8 md:p-10 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                            Receba <span className="text-accent italic">Informações Jurídicas</span>
                         </h2>
-                        <p className="text-muted text-lg mb-8 leading-relaxed">
-                            Clique abaixo e preencha o formulário para que nossa equipe analise seu caso e entenda como podemos ajudá-lo a buscar a restituição do Imposto de Renda do seu Auxílio-Transporte (QM).
+                        <p className="text-muted text-xs mb-8 leading-relaxed max-w-sm mx-auto">
+                            Mantenha-se atualizado sobre temas relevantes do direito dos servidores públicos e questões tributárias.
                         </p>
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <div className="w-2 h-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
-                                <span className="text-sm font-medium">Análise Gratuita</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="w-2 h-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
-                                <span className="text-sm font-medium">Equipe Especializada</span>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="w-2 h-2 rounded-full bg-primary ring-4 ring-primary/20"></div>
-                                <span className="text-sm font-medium">Atendimento Digital</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="p-8 md:p-12">
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
-                                <label className="block text-xs font-bold uppercase tracking-widest text-muted mb-2">Nome Completo</label>
-                                <input required type="text" className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white" placeholder="Seu nome" />
+                                <input name="nome" type="text" className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white text-xs" placeholder="Nome (Opcional)" />
                             </div>
 
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-muted mb-2">E-mail</label>
-                                    <input required type="email" className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white" placeholder="email@exemplo.com" />
-                                </div>
-                                <div>
-                                    <label className="block text-xs font-bold uppercase tracking-widest text-muted mb-2">WhatsApp</label>
-                                    <input required type="tel" className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white" placeholder="(00) 00000-0000" />
-                                </div>
-                            </div>
-
-                            <div className="pt-4 space-y-4">
-                                <p className="text-xs text-muted/60 mb-2 uppercase font-bold tracking-tighter">Perguntas Obrigatórias:</p>
-
-                                <label className="flex items-center gap-3 cursor-pointer group">
-                                    <input required type="checkbox" className="w-5 h-5 rounded border-white/10 bg-dark text-accent focus:ring-accent/20 cursor-pointer" />
-                                    <span className="text-sm text-muted group-hover:text-white transition-colors">Sou Professor(a) da Rede Estadual de SP.</span>
-                                </label>
-
-                                <label className="flex items-center gap-3 cursor-pointer group">
-                                    <input required type="checkbox" className="w-5 h-5 rounded border-white/10 bg-dark text-accent focus:ring-accent/20 cursor-pointer" />
-                                    <span className="text-sm text-muted group-hover:text-white transition-colors">Recebo Auxílio-Transporte (QM).</span>
-                                </label>
-
-                                <label className="flex items-center gap-3 cursor-pointer group">
-                                    <input required type="checkbox" className="w-5 h-5 rounded border-white/10 bg-dark text-accent focus:ring-accent/20 cursor-pointer" />
-                                    <span className="text-sm text-muted group-hover:text-white transition-colors">Tive descontos de IR no Auxílio nos últimos 5 anos.</span>
-                                </label>
+                            <div>
+                                <input required name="email" type="email" className="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary transition-colors text-white text-xs" placeholder="Email" />
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full mt-6 bg-white text-navy font-black py-5 rounded-xl hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2 group shadow-2xl shadow-white/5"
+                                className="w-full mt-2 bg-white text-navy font-bold py-3 rounded-xl hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2 group shadow-xl uppercase text-xs tracking-wider"
                             >
-                                QUERO ANALISAR MEU CASO
-                                <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                INSCREVER-SE
+                                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </button>
 
-                            <p className="text-[10px] text-center text-muted/40 mt-4 leading-relaxed">
-                                Ao enviar, você concorda com o processamento de seus dados para fins de análise jurídica inicial.
+                            <p className="text-[9px] text-muted/60 mt-4 leading-relaxed italic px-4">
+                                Ao se inscrever, você receberá conteúdos informativos relacionados à área de atuação do escritório.
                             </p>
                         </form>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

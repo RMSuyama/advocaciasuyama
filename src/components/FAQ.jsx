@@ -7,10 +7,10 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         <div className="mb-4 border-b border-white/5 last:border-0">
             <button
                 onClick={onToggle}
-                className={`w-full flex items-center justify-between py-6 text-left transition-colors focus:outline-none ${isOpen ? 'text-accent' : 'hover:text-accent'}`}
+                className={`w-full flex items-center justify-between py-4 text-left transition-colors focus:outline-none ${isOpen ? 'text-accent' : 'hover:text-accent'}`}
             >
-                <span className="text-lg font-semibold pr-8">{question}</span>
-                <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+                <span className="text-base font-semibold pr-8">{question}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             <AnimatePresence>
                 {isOpen && (
@@ -21,7 +21,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                     >
-                        <p className="pb-6 text-slate-400 leading-relaxed">
+                        <p className="pb-4 text-slate-400 text-xs md:text-sm leading-relaxed">
                             {answer}
                         </p>
                     </motion.div>
@@ -32,36 +32,36 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
 };
 
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
         {
-            question: "Qual o custo para entrar com a ação?",
-            answer: "Nossos honorários são definidos conforme as tabelas da OAB e podem ser pactuados de forma a serem pagos ao final do processo, apenas em caso de sucesso. É possível, ainda, verificar a elegibilidade para a gratuidade de justiça. Entre em contato para uma análise personalizada sem compromisso."
+            question: "Qual o procedimento para iniciar uma análise de caso?",
+            answer: "O primeiro passo é agendar uma consulta para que possamos analisar a documentação pertinente e discutir os detalhes do seu caso individualmente."
         },
         {
-            question: "Quanto tempo leva o processo?",
-            answer: "Processos contra a Fazenda Pública variam, mas costumam levar entre 12 a 24 meses até o trânsito em julgado. A boa notícia é que uma liminar pode cessar os descontos mensais rapidamente."
+            question: "Como são definidos os honorários advocatícios?",
+            answer: "Os honorários são estabelecidos conforme a tabela da OAB e definidos em contrato após análise do caso. Informaremos sobre as modalidades e elegibilidade para gratuidade de justiça na consulta."
         },
         {
-            question: "Preciso ter todos os documentos dos últimos 5 anos?",
-            answer: "É o ideal para recuperar o valor máximo. Caso falte algum holerite, podemos orientar como obter a via oficial junto ao portal do servidor ou RH da Secretaria de Educação."
+            question: "Qual a documentação necessária para a análise?",
+            answer: "Geralmente, solicitamos holerites e declarações de Imposto de Renda dos últimos 5 anos. Detalhes adicionais podem ser pedidos conforme a especificidade do caso."
         },
         {
-            question: "Qual a solidez da tese jurídica?",
-            answer: "A tese de não incidência de Imposto de Renda sobre o auxílio-transporte possui uma jurisprudência consolidada em tribunais superiores, como o STJ. Cada caso, no entanto, é único e será analisado individualmente por nossa equipe jurídica."
+            question: "Qual a fundamentação jurídica dessas teses?",
+            answer: "As teses fundamentam-se na Lei nº 7.713/88, LC nº 1.245/14 e em posicionamentos dos Tribunais Superiores (STJ Súmula 447, Temas 351 STJ e 368 STF), além de precedentes do TJSP."
         }
     ];
 
     return (
-        <section className="w-full max-w-4xl mx-auto py-12 px-4">
-            <div className="container mx-auto max-w-3xl">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Perguntas <span className="text-accent italic">Frequentes</span></h2>
-                    <p className="text-sm md:text-lg text-slate-400">Tire suas dúvidas sobre o processo e seus direitos.</p>
+        <section id="faq" className="w-full max-w-4xl mx-auto px-4">
+            <div className="container mx-auto">
+                <div className="text-center mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-2">Perguntas <span className="text-accent italic">Frequentes</span></h2>
+                    <p className="text-xs md:text-sm text-slate-400">Tire suas dúvidas sobre o processo e fundamentação jurídica.</p>
                 </div>
 
-                <div className="bg-card border border-white/10 rounded-3xl p-8 shadow-2xl">
+                <div className="bg-card border border-white/10 rounded-3xl p-6 shadow-2xl">
                     {faqs.map((faq, index) => (
                         <FAQItem
                             key={index}
